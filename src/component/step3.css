@@ -1,0 +1,255 @@
+#form-container-step3 {
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  height: 700px;
+  margin: 80px auto;
+}
+
+#form-sidebar-step3 {
+  width: 30%;
+  position: relative;
+  color: white;
+  background: url('../assets/image/sideimg.jpg');
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-steps-step3 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#form-steps-step3 li {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#form-steps-step3 li .step-circle {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #483dff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#form-steps-step3 li span {
+  display: block;
+  font-size: 12px;
+}
+
+#form-steps-step3 li.active .step-circle {
+  background-color: #483dff;
+  color: white;
+}
+
+#form-content-step3 {
+  width: 70%;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  background-color: #ffffff;
+}
+
+#form-content-step3 h1 {
+  margin-top: 30px;
+  color: #211e83;
+}
+
+#form-content-step3 p {
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  display: flex;
+  color: #100e52;
+  font-weight: 900;
+  flex-direction: column;
+}
+
+label input {
+  width: 100%; 
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#email-phone-container-step3 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#email-phone-container-step3 label {
+  flex: 1;
+}
+
+#city-state-container-step3 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#city-state-container-step3 label {
+  flex: 1;
+}
+
+#error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#button-container-step3 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -50px;
+}
+
+#back-button-step3, #submit-button-step3 {
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+  z-index: 0;
+}
+
+#submit-button-step3 {
+  background-color: #333;
+}
+
+#back-button-step3 {
+  background-color: #777;
+}
+
+#submit-button-step3::after, #back-button-step3::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#submit-button-step3::before, #back-button-step3::before {
+  content: "";
+  background: linear-gradient(
+    45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF,
+    #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+#submit-button-step3:hover::before, #back-button-step3:hover::before {
+  opacity: 1;
+}
+
+#submit-button-step3:active::after, #back-button-step3:active::after {
+  background: transparent;
+}
+
+#submit-button-step3:active, #back-button-step3:active {
+  color: #000;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  #form-container-step3 {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  #form-sidebar-step3 {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #form-content-step3 {
+    width: 94%;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #form-content-step3 h1 {
+    font-size: 24px; 
+  }
+
+  #form-content-step3 p {
+    font-size: 14px; 
+  }
+
+  #email-phone-container-step3, #city-state-container-step3 {
+    flex-direction: column;
+  }
+
+  label input {
+    width: 100%;
+  }
+}
+@media (max-width: 500px){
+  #button-container-step3{
+    margin-top: -10px;
+  }
+
+  #form-content-step3{
+    width: 90%;
+  }
+  #form-sidebar-step3{
+    width: 100%;
+  }
+}
+@media (max-width: 400px){
+  
+  #form-content-step3{
+    width: 87%;
+  }
+}

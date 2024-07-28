@@ -1,0 +1,210 @@
+#step-2-form-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  height: 620px;
+  margin: 80px auto;
+  min-width: 50%;
+}
+
+#step-2-form-sidebar {
+  width: 30%;
+  min-height: 600px;
+  position: relative;
+  color: white;
+  background: url('../assets/image/sideimg.jpg');
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+ 
+}
+
+#step-2-form-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#step-2-form-steps li {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#step-2-form-steps li .step-circle {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #483dff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#step-2-form-steps li span {
+  display: block;
+  font-size: 12px;
+}
+
+#step-2-form-steps li.active .step-circle {
+  background-color: #483dff;
+  color: white;
+}
+
+#step-2-form-content {
+  width: 70%;
+  height: 94%;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  background-color: #ffffff;
+}
+
+#step-2-form-content h1 {
+  margin-top: 30px;
+  color: #211e83;
+}
+
+#step-2-form-content p {
+  color: #555;
+}
+
+#step-2-form-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+#step-2-form-content label {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  display: flex;
+  color: #100e52;
+  font-weight: 900;
+  flex-direction: column;
+}
+
+#step-2-form-content label input {
+  width: calc(100% - 22px); 
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#step-2-city-state-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#step-2-city-state-container label {
+  flex: 1;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+label input.error {
+  border-color: rgb(131, 51, 51);
+
+}
+
+
+#step-2-button-container {
+  margin-top: -30px;
+  display: flex;
+  align-self: flex-end;
+   gap: 10px;
+}
+
+
+
+@media (max-width: 800px) {
+  #step-2-form-container {
+    flex-direction: column;
+    width: 95%;
+    height: 920px;
+  }
+
+  #step-2-form-sidebar {
+    border-radius: 20px 20px  0px 0px;
+    width: 97%;
+   min-height: 200px;
+    padding: 10px;
+  }
+
+  #step-2-form-content {
+    border-radius: 20px;
+    width: 97%;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+  }
+  #step-2-city-state-container{
+    flex-direction: column;
+  }
+  #step-2-button-container{
+    margin-top: -45px;
+  }
+}
+
+@media (max-width: 480px) {
+  #step-2-form-container {
+    width: 90%;
+    margin: 20px auto;
+    height: 880px;
+  }
+
+  #step-2-form-sidebar {
+    height: 100px;
+  }
+
+  #step-2-form-content {
+    max-width: 97%;
+  }
+
+  #step-2-button-container{
+    margin-top: 15px;
+  }
+  #step-2-form-steps li {
+    font-size: 14px;
+  }
+
+  #step-2-form-steps li .step-circle {
+    width: 25px;
+    height: 25px;
+  }
+
+  #step-2-form-content h1 {
+    font-size: 1.5rem;
+  }
+
+  #step-2-form-content p {
+    font-size: 0.9rem;
+  }
+
+  #step-2-form-content label {
+    font-size: 0.9rem;
+  }
+
+  #step-2-form-content label input {
+    padding: 8px;
+  }
+
+ 
+}
